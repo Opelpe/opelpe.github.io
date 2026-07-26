@@ -3,9 +3,155 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Opelpe</title>
+<title>Piotr Nowak — Android Developer</title>
+<meta name="description" content="Piotr Nowak, Android Developer. Kotlin, Jetpack Compose, Clean Architecture." />
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5f6368;
+    --accent: #3b6dd6;
+    --card-bg: #f5f6f8;
+    --border: #e2e4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121316;
+      --text: #eaeaea;
+      --muted: #a0a4ab;
+      --accent: #7aa2ff;
+      --card-bg: #1c1e22;
+      --border: #2c2f34;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 0.25rem;
+  }
+  .tagline {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin: 0 0 1.5rem;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+  .links a {
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  section h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  .project-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  .project-card p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.25rem;
+  }
+  .tags span {
+    font-size: 0.78rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.2rem 0.55rem;
+    color: var(--muted);
+  }
+  .project-card a.cta {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .project-card a.cta:hover {
+    text-decoration: underline;
+  }
+  footer {
+    margin-top: 4rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
 </head>
 <body>
-<p>Personal site placeholder. App privacy policies are under their own app folders, e.g. <a href="/weather-activity-planner/privacy-policy.html">/weather-activity-planner/privacy-policy.html</a>.</p>
+<main>
+  <h1>Piotr Nowak</h1>
+  <p class="tagline">Android Developer</p>
+
+  <div class="links">
+    <a href="https://github.com/Opelpe" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/pnowak-dev/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:pnow.dev@gmail.com">Email</a>
+  </div>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Weather Activity Planner</h3>
+      <p>
+        A native Android app that ranks activities — skiing, surfing, cycling, stargazing, and more —
+        for the week ahead based on live weather forecasts, built with Clean Architecture and full
+        unit test coverage across all layers.
+      </p>
+      <div class="tags">
+        <span>Kotlin</span>
+        <span>Jetpack Compose</span>
+        <span>Clean Architecture</span>
+        <span>MVVM</span>
+        <span>Hilt</span>
+        <span>Coroutines &amp; Flow</span>
+      </div>
+      <a class="cta" href="https://github.com/Opelpe/weather-activity-planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Piotr Nowak
+  </footer>
+</main>
 </body>
 </html>
