@@ -100,6 +100,11 @@
     padding: 0.2rem 0.55rem;
     color: var(--muted);
   }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
   .project-card a.cta {
     display: inline-block;
     color: var(--accent);
@@ -145,7 +150,10 @@
         <span>Hilt</span>
         <span>Coroutines &amp; Flow</span>
       </div>
-      <a class="cta" href="https://github.com/Opelpe/weather-activity-planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      <div class="cta-row">
+        <a class="cta" href="https://github.com/Opelpe/weather-activity-planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        <a class="cta" href="https://play.google.com/store/apps/details?id=com.pnow.weatheractivityplanner" target="_blank" rel="noopener">Get it on Google Play &rarr;</a>
+      </div>
     </div>
   </section>
 
