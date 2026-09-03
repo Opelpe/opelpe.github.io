@@ -81,6 +81,31 @@
   .project-card h3 {
     margin: 0 0 0.5rem;
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .badge-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #1a8f4c;
+    background: rgba(26, 143, 76, 0.12);
+    border: 1px solid rgba(26, 143, 76, 0.3);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
+  }
+  .badge-live::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #1a8f4c;
   }
   .project-card p {
     margin: 0 0 1rem;
@@ -100,6 +125,12 @@
     padding: 0.2rem 0.55rem;
     color: var(--muted);
   }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+  }
   .project-card a.cta {
     display: inline-block;
     color: var(--accent);
@@ -109,6 +140,27 @@
   }
   .project-card a.cta:hover {
     text-decoration: underline;
+  }
+  .play-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--bg);
+    background: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    transition: opacity 0.15s ease;
+  }
+  .play-badge:hover {
+    opacity: 0.85;
+  }
+  .play-badge svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
   }
   footer {
     margin-top: 4rem;
@@ -131,7 +183,10 @@
   <section>
     <h2>Projects</h2>
     <div class="project-card">
-      <h3>Weather Activity Planner</h3>
+      <h3>
+        Weather Activity Planner
+        <span class="badge-live">Available on Google Play</span>
+      </h3>
       <p>
         A native Android app that ranks activities: skiing, surfing, cycling, stargazing, and more -
         for the week ahead based on live weather forecasts, built with Clean Architecture and full
@@ -145,7 +200,15 @@
         <span>Hilt</span>
         <span>Coroutines &amp; Flow</span>
       </div>
-      <a class="cta" href="https://github.com/Opelpe/weather-activity-planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      <div class="cta-row">
+        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.pnow.weatheractivityplanner" target="_blank" rel="noopener" aria-label="Get Weather Activity Planner on Google Play">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+            <path d="M3.609 1.814L13.792 12 3.61 22.186a1.87 1.87 0 01-.61-1.38V3.194c0-.53.23-1.006.609-1.38m10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635m3.199-2.198l3.187 1.851c.53.307.847.866.847 1.47s-.317 1.163-.847 1.47l-3.187 1.851-2.532-2.532 2.532-2.532M6.609 1.814l10.937 6.333-2.302 2.302L6.609 1.814z"/>
+          </svg>
+          Get it on Google Play
+        </a>
+        <a class="cta" href="https://github.com/Opelpe/weather-activity-planner" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
     </div>
   </section>
 
